@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:p2="urn:gaseras.ceoc.com:srvemp:base" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:gaseras.ceoc.com:srvemp:crm:financiacion" name="EstCuenta_Out" targetNamespace="urn:gaseras.ceoc.com:srvemp:crm:financiacion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_EstCuenta_Sync" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:gaseras.ceoc.com:srvemp:base" targetNamespace="urn:gaseras.ceoc.com:srvemp:base" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_EstadoCuenta_res" type="p2:DT_EstadoCuenta_res" />
+      <xsd:element name="MT_EstadoCuenta_req" type="p2:DT_EstadoCuenta_req" />
+      <xsd:complexType name="DT_EstadoCuenta_req">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">784e865ea0ae11edb40b00000012a0f4</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="contrato" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_EstadoCuenta_res">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">3ac9b793a0af11edc9d200000012a0f4</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OclFactData" type="xsd:string" />
+          <xsd:element minOccurs="0" name="OnuErrorcode" type="xsd:string" />
+          <xsd:element minOccurs="0" name="osbErrorMessage" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2.MT_EstadoCuenta_req">
+    <wsdl:documentation />
+    <wsdl:part name="MT_EstadoCuenta_req" element="p2:MT_EstadoCuenta_req" />
+  </wsdl:message>
+  <wsdl:message name="p2.MT_EstadoCuenta_res">
+    <wsdl:documentation />
+    <wsdl:part name="MT_EstadoCuenta_res" element="p2:MT_EstadoCuenta_res" />
+  </wsdl:message>
+  <wsdl:portType name="EstCuenta_Out">
+    <wsdl:documentation />
+    <wsdl:operation name="EstCuenta_Sync">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_EstCuenta_Sync" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p2.MT_EstadoCuenta_req" />
+      <wsdl:output message="p1:p2.MT_EstadoCuenta_res" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EstCuenta_OutBinding" type="p1:EstCuenta_Out">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="EstCuenta_Sync">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CEOPORTALWEBVTAS_Q_EstCuenta_Out">
+    <wsdl:port name="HTTP_Port" binding="p1:EstCuenta_OutBinding">
+      <address location="http://xd1ds01:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=CEOPORTALWEBVTAS_Q&amp;receiverParty=&amp;receiverService=&amp;interface=EstCuenta_Out&amp;interfaceNamespace=urn%3Agaseras.ceoc.com%3Asrvemp%3Acrm%3Afinanciacion" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:EstCuenta_OutBinding">
+      <address location="https://xd1ds01:443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=CEOPORTALWEBVTAS_Q&amp;receiverParty=&amp;receiverService=&amp;interface=EstCuenta_Out&amp;interfaceNamespace=urn%3Agaseras.ceoc.com%3Asrvemp%3Acrm%3Afinanciacion" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

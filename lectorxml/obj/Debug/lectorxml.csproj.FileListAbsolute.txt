@@ -1,0 +1,14 @@
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\bin\Debug\lectorxml.exe.config
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\bin\Debug\lectorxml.exe
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\bin\Debug\lectorxml.pdb
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.csproj.AssemblyReference.cache
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.Form1.resources
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.Properties.Resources.resources
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.csproj.GenerateResource.cache
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.csproj.CoreCompileInputs.cache
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.exe
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.pdb
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alvaro Zuñiga\source\repos\lectorxml\lectorxml\obj\Debug\lectorxml.csproj.CopyComplete
